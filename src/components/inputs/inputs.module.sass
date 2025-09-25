@@ -1,0 +1,97 @@
+
+.inputs
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 2em
+    z-index: 2
+    font-size: clamp(1.4rem, 1rem + 1vw, 1.6rem)
+
+    label, ul
+        background: var(--Elements)
+        box-shadow: var(--Box-Shadow)
+        border-radius: .4em
+
+    label:first-child
+        display: flex
+        align-items: center
+        gap: 2em
+        width: clamp(24em, 16em + 16vw, 48em)
+        padding: 1em 2em 1em 2em
+        img
+            filter: invert(1) brightness(.9)
+        input
+            display: inline-block
+            border: none
+            background: none
+            width: 100%
+            caret-color: #2616fa
+            color: var(--Input)
+            font-size: clamp(1.4rem, 1rem + 1vw, 1.8rem)
+            &::placeholder
+                color: var(--Input)
+                font-size: clamp(1.4rem, 1rem + 1vw, 1.6rem)
+            &:focus
+                outline: none
+
+    .customSelect
+        position: relative
+        width: calc(clamp(24em, 16em + 16vw, 48em) / 2 )
+        color: var(--Text)
+        input
+            display: none
+        label
+            display: inline-block
+            position: relative
+            padding: 1em 4em 1em 1em
+            width: max-content
+            &::after
+                content: "▼"
+                font-size: clamp(1.4rem, 1rem + 1vw, 1.6rem)
+                color: #7c7c7c
+                position: absolute
+                right: 1em
+                top: 50%
+                transform: translateY(-50%)
+                pointer-events: none
+        ul
+            position: absolute
+            top: 100%
+            left: 0
+            transform: translateY(5%) scaleY(0)
+            transform-origin: top
+            width: 100%
+            display: flex
+            flex-direction: column
+            overflow: hidden
+            li
+                padding: .5em 4em .5em 2em
+        &:has(input:checked)
+            label::after
+                transform: translateY(-50%) rotate(180deg)
+            ul
+                transform: translateY(5%) scaleY(1)
+
+@media screen and ( width >= 47.5em )
+    .inputs
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        gap: 0
+        .customSelect
+            label
+                width: 100%
+
+@media screen and (hover: hover)
+    .inputs
+        label:first-child
+            cursor: text
+        .customSelect
+            label
+                cursor: pointer
+            ul
+                li
+                    cursor: pointer
+                    &:hover
+                        background: #7a798556

@@ -1,0 +1,19 @@
+.countries-container
+    display: grid
+    place-items: stretch
+    width: 100%
+    grid-template-columns: repeat(1, 1fr)
+    gap: 4em
+
+@media screen and ( width >= 47.5em )
+    .countries-container
+        grid-template-columns: repeat(2, 1fr)
+
+@media screen and ( width >= 63.75em )
+    .countries-container
+        grid-template-columns: repeat(3, 1fr)
+
+@media screen and (width >= 110em)
+    .countries-container
+        grid-template-columns: repeat(4, 1fr)
+

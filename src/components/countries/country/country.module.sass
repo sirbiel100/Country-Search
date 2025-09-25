@@ -1,0 +1,34 @@
+@use "sass:color"
+.country
+    display: flex
+    flex-direction: column
+    gap: 2em
+    $Grey_400_Light_Mode_Input: hsl(0, 0%, 50%)
+    background: var(--Elements)
+    box-shadow: var(--Box-Shadow)
+    padding: 0 0 4em 0
+    border-radius: .5em
+    overflow: hidden
+    .description
+        padding: 0 0 0 2em
+        color: var(--Text)
+        line-height: 1.8
+        h3
+            font-size: clamp(1.6rem, 1rem + 1vw, 1.8rem)
+            padding: 0 0 1em 0
+        p
+            font-size: 1.4rem
+            strong
+                font-weight: 600
+    .flags
+        overflow: hidden
+        img
+            width: 100%
+            max-width: max-content
+            object-fit: cover
+            object-position: top center
+            aspect-ratio: 3/2
+
+@media screen and ( hover: hover )
+    .country
+        cursor: pointer

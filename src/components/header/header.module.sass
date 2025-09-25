@@ -1,0 +1,42 @@
+.header
+    display: flex
+    flex-direction: column
+    gap: 2em
+    align-items: center
+    width: 100%
+    background: yellow
+    font-size: clamp(1.4rem, 1rem + 1vw, 1.6rem)
+    nav
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 2.5em 2em
+        background: var(--Elements)
+        box-shadow: var(--Box-Shadow)
+        width: 100%
+        p
+            color: var(--Text)
+        & > p
+            font-weight: 800
+        div
+            display: flex
+            align-items: center
+            gap: .5em
+            font-size: 1.2rem
+            font-weight: 600
+            border-radius: .3em
+            padding: .8em
+            img
+                width: 1.5em
+
+@media screen and ( width >= 47.5em )
+    .header
+        nav
+            padding: 1.5em 4em
+
+@media screen and (hover: hover)
+    .header
+        nav
+            div:hover
+                cursor: pointer
+                background: #85858538

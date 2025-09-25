@@ -1,0 +1,86 @@
+.country-details
+    padding: 4em 8em
+    main
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        gap: 5em
+        color: var(--Text)
+        button
+            display: flex
+            align-items: center
+            gap: .3em
+            background: var(--Elements)
+            color: var(--Text)
+            border: none
+            padding: .5em 1.5em
+            box-shadow: var(--Box-Shadow)
+            border-radius: .2em
+            font-weight: 300
+
+        .details
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 4em
+
+            & > div
+                display: flex
+                flex-direction: column
+                gap: 1em
+
+            .border
+                display: flex
+                flex-wrap: wrap
+                gap: 1em
+            p
+                font-size: 1.4rem
+                strong
+                    font-weight: 600
+
+            h2
+                font-weight: 600
+
+@media screen and ( width >= 63.75em )
+    .country-details
+        main
+            display: grid
+            grid-template-areas: "button button" "flag details"
+            place-items: start
+            place-content: center
+            max-height: 60em
+            column-gap: 12em
+            grid-template-columns: repeat(2, 1fr)
+            & > button
+                grid-area: button
+            & > img
+                grid-area: flag
+                object-fit: contain
+                aspect-ratio: 3/2
+                max-width: max-content
+                width: 100%
+                height: auto
+            .details
+                grid-area: details
+                display: grid
+                grid-template-areas: "country country" "first second" "border border"
+                grid-template-columns: repeat(2, 1fr 1fr)
+                height: 100%
+                h1
+                    grid-area: country
+                    font-size: 2.2rem
+                .first
+                    grid-area: first
+                .second
+                    grid-area: second
+                .borderGrid
+                    grid-area: border
+                p
+                    font-size: 1.6rem
+
+@media screen and (hover: hover)
+    .country-details
+        button
+            cursor: pointer
+            &:hover
+                scale: 1.05

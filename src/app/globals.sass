@@ -1,0 +1,44 @@
+@use "../components/variables" as *
+@use "sass:color"
+
+:root
+    font-size: 62.5%
+
+.light
+    --Text: hsl(200, 15%, 8%)
+    --Input: hsl(0, 0%, 50%)
+    --Background: hsl(0, 0%, 99%)
+    --Elements: hsl(0, 100%, 100%)
+    --Box-Shadow: 0 .1em 1em 0 #1a1a1a3a
+
+.dark
+    --Text: hsl(0, 100%, 100%)
+    --Input: hsl(0, 0%, 50%)
+    --Background: hsl(207, 26%, 17%)
+    --Elements: hsl(209, 23%, 22%)
+    --Box-Shadow: 0 .1em 1em 0 #1a1a1a5b
+
+*, *::before, *::after
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    transition: color 300ms, background 300ms, box-shadow 300ms, transform 300ms ease-in-out
+
+html
+    color: light dark
+    max-width: 100svw
+
+body
+    display: flex
+    flex-direction: column
+    gap: 5em
+    min-height: 100dvh
+    width: 100%
+    background: var(--Background)
+
+li
+    list-style: none
+
+img
+    max-width: 100%
+    height: auto
