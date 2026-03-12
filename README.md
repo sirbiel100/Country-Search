@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click Here](hhttps://github.com/sirbiel100/Country-Search)
-- Live Site URL: [Click Here](https://your-live-site-url.com)
+- Solution URL: [Click Here](https://github.com/sirbiel100/Country-Search)
+- Live Site URL: [Click Here](https://sirbiel100.github.io/Country-Search/)
 
 ## My process
 
